@@ -1,0 +1,48 @@
+┌──────────────────────────────────────────────┐
+│                 USUARIO                      │
+│        Navegador Web / Computadora           │
+└──────────────────────┬───────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│                  REACT                       │
+│                FRONTEND                      │
+│                                              │
+│ Login                                        │
+│ Dashboard                                    │
+│ Inventario                                   │
+│ Usuarios                                     │
+│ Catálogos                                    │
+│ Asignaciones                                 │
+│ Mantenimientos                               │
+│ Reportes                                     │
+└──────────────────────┬───────────────────────┘
+                       │
+                       │ HTTP / JSON
+                       │ API REST
+                       ▼
+┌──────────────────────────────────────────────┐
+│                LARAVEL 12                    │
+│                 BACKEND                      │
+│                                              │
+│ Routes API                                   │
+│ Controllers                                  │
+│ Requests / Validaciones                      │
+│ Models Eloquent                              │
+│ Middleware                                   │
+│ Policies / Roles                             │
+│ Sanctum                                      │
+└──────────────────────┬───────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│                  MYSQL                       │
+│                                              │
+│ vaai_usuarios                                │
+│ vaai_roles                                   │
+│ vaai_equipos                                 │
+│ vaai_asignaciones                            │
+│ vaai_movimientos                             │
+│ vaai_mantenimientos                          │
+│ etc.                                         │
+└──────────────────────────────────────────────┘

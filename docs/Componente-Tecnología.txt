@@ -1,0 +1,16 @@
+| Componente          | Tecnología      |
+| ------------------- | --------------- |
+| Backend             | Laravel 12      |
+| Lenguaje Backend    | PHP             |
+| Frontend            | React           |
+| Compilador Frontend | Vite            |
+| Lenguaje Frontend   | JavaScript      |
+| Base de datos       | MySQL           |
+| API                 | REST            |
+| Formato intercambio | JSON            |
+| Autenticación       | Laravel Sanctum |
+| Estilos             | Bootstrap 5     |
+| Iconos              | Bootstrap Icons |
+| Cliente HTTP        | Axios           |
+| Rutas React         | React Router    |
+| ORM                 | Eloquent        |

@@ -1,0 +1,55 @@
+vaai_roles
+     │
+     │ 1
+     │
+     └──────── N
+           vaai_usuarios
+                │
+                │
+                ├──────── vaai_asignaciones
+                │               │
+                │               │
+                │           vaai_equipos
+                │               │
+                │               ├── vaai_cat_tipos_equipo
+                │               ├── vaai_cat_marcas
+                │               ├── vaai_cat_modelos
+                │               ├── vaai_proveedores
+                │               ├── vaai_ubicaciones
+                │               └── vaai_estados_equipo
+                │
+                └──────── vaai_incidencias
+
+
+vaai_equipos
+     │
+     ├──────── vaai_movimientos
+     ├──────── vaai_mantenimientos
+     ├──────── vaai_asignaciones
+     ├──────── vaai_bajas
+     └──────── vaai_documentos
+
+PHP        8.2.12       ✅
+Composer   2.10.1       ✅
+Node.js    24.17.0      ✅
+npm        11.13.0      ✅
+MariaDB    10.4.32      ✅
+PHP 8.2.12   ✅
+Laravel 12   ✅
+
+
+
+C:\Users\Oswaldo Vargas>
+
+cd C:\xampp\htdocs
+
+composer create-project laravel/laravel:^12.0 inventarios_vaai
+
+cd inventarios_vaai
+
+php artisan --version
+
+o
+php artisan about
+
+php artisan serve

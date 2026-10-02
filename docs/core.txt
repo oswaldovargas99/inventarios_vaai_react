@@ -1,0 +1,64 @@
+inventarios_vaai/
+│
+├── bootstrap/
+│   └── app.php                 ← IMPORTANTE
+│
+├── routes/
+│   └── api.php                 ← Rutas de autenticación
+│
+├── app/
+│   └── Http/
+│       └── Controllers/
+│           └── AuthController.php
+│
+├── config/
+│   └── sanctum.php             ← Si Sanctum está instalado/publicado
+│
+└── .env                        ← Configuración de sesión/dominios
+
+
+
+
+
+resources/js/pages/Login.jsx
+resources/js/pages/Dashboard.jsx
+resources/js/components/ProtectedRoute.jsx
+
+
+Login
+  ↓
+auth:sanctum
+  ↓
+Usuario autenticado
+  ↓
+Middleware de rol
+  ↓
+¿Tiene permiso?
+  ├── Sí → permite acceso
+  └── No → 403
+
+
+
+Laravel 12
+│
+├── routes/api.php
+├── AuthController
+├── Middleware
+├── Modelos
+└── MySQL
+        ↑
+        │ API + Sanctum
+        │
+React + CoreUI
+│
+├── Login
+├── Layout
+├── Sidebar
+├── Header
+├── Dashboard
+└── Catálogos
+    ├── Tipos de Equipo
+    ├── Marcas
+    ├── Modelos
+    ├── Dependencias
+    └── Proveedores

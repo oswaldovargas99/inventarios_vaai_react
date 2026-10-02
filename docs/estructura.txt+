@@ -1,0 +1,15 @@
+app/
+├── Http/
+│   └── Controllers/
+│       └── Administrador/
+│           └── Catalogos/
+│               ├── MarcaController.php
+│               ├── ModeloController.php
+│               └── TipoEquipoController.php
+│
+└── Models/
+    └── Administrador/
+        └── Catalogos/
+            ├── Marca.php
+            ├── Modelo.php
+            └── TipoEquipo.php

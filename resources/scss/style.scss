@@ -1,0 +1,884 @@
+/*
+|--------------------------------------------------------------------------
+| CoreUI
+|--------------------------------------------------------------------------
+|
+| CoreUI se carga únicamente desde SCSS.
+| NO importar coreui.min.css nuevamente desde app.jsx.
+|
+*/
+
+@use "@coreui/coreui/scss/coreui" as * with (
+    $enable-deprecation-messages: false,
+);
+
+
+/*
+|--------------------------------------------------------------------------
+| SimpleBar
+|--------------------------------------------------------------------------
+*/
+
+@use "vendors/simplebar";
+
+
+/*
+|--------------------------------------------------------------------------
+| Documento
+|--------------------------------------------------------------------------
+*/
+
+html,
+body,
+#app {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--cui-tertiary-bg);
+
+    font-size: 0.9rem;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Wrapper principal
+|--------------------------------------------------------------------------
+|
+| Reserva automáticamente el espacio utilizado por el Sidebar de CoreUI.
+|
+*/
+
+.wrapper {
+    width: 100%;
+
+    padding-inline:
+        var(--cui-sidebar-occupy-start, 0)
+        var(--cui-sidebar-occupy-end, 0);
+
+    will-change: auto;
+
+    @include transition(padding 0.15s);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Contenido principal
+|--------------------------------------------------------------------------
+*/
+
+.body {
+    flex-grow: 1;
+
+    padding-bottom: 1.5rem;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Header
+|--------------------------------------------------------------------------
+*/
+
+.header {
+    background-color: var(--cui-body-bg);
+
+    border-bottom-color: var(--cui-border-color) !important;
+}
+
+.header > .container-fluid,
+.sidebar-header {
+    min-height: calc(4rem + 1px);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Sidebar
+|--------------------------------------------------------------------------
+*/
+
+.sidebar {
+    /*
+    |--------------------------------------------------------------------------
+    | Colores generales
+    |--------------------------------------------------------------------------
+    */
+
+    --cui-sidebar-bg: #2f4960;
+
+    --cui-sidebar-color:
+        rgba(255, 255, 255, 0.86);
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Enlaces
+    |--------------------------------------------------------------------------
+    */
+
+    --cui-sidebar-nav-link-color:
+        rgba(255, 255, 255, 0.78);
+
+    --cui-sidebar-nav-link-icon-color:
+        rgba(255, 255, 255, 0.66);
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Hover
+    |--------------------------------------------------------------------------
+    */
+
+    --cui-sidebar-nav-link-hover-bg:
+        rgba(255, 255, 255, 0.08);
+
+    --cui-sidebar-nav-link-hover-color:
+        #ffffff;
+
+    --cui-sidebar-nav-link-hover-icon-color:
+        #ffffff;
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Activo
+    |--------------------------------------------------------------------------
+    */
+
+    --cui-sidebar-nav-link-active-bg:
+        rgba(255, 255, 255, 0.12);
+
+    --cui-sidebar-nav-link-active-color:
+        #ffffff;
+
+    --cui-sidebar-nav-link-active-icon-color:
+        #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Sidebar Header
+|--------------------------------------------------------------------------
+*/
+
+.sidebar-header {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-brand {
+    font-weight: 600;
+
+    letter-spacing: 0.01rem;
+}
+
+.sidebar-brand-full {
+    margin-left: 3px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Títulos del Sidebar
+|--------------------------------------------------------------------------
+*/
+
+.sidebar .nav-title {
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.065rem;
+
+    text-transform: uppercase;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Sidebar links
+|--------------------------------------------------------------------------
+*/
+
+.sidebar-nav .nav-link {
+    border-radius: 0.35rem;
+
+    margin-inline: 0.4rem;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Sidebar Toggler
+|--------------------------------------------------------------------------
+*/
+
+.sidebar-toggler {
+    margin-inline-start: auto;
+}
+
+.sidebar-narrow,
+.sidebar-narrow-unfoldable:not(:hover) {
+
+    .sidebar-toggler {
+        margin-inline-end: auto;
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Encabezados de página
+|--------------------------------------------------------------------------
+*/
+
+.page-title {
+    margin-bottom: 0.25rem;
+
+    color: var(--cui-emphasis-color);
+
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.page-subtitle {
+    margin-bottom: 0;
+
+    color: var(--cui-secondary-color);
+
+    font-size: 0.875rem;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Cards generales
+|--------------------------------------------------------------------------
+*/
+
+.card {
+    border-color: var(--cui-border-color);
+
+    box-shadow:
+        0 0.125rem 0.3rem rgba(0, 0, 0, 0.035);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Cards de módulos del Dashboard
+|--------------------------------------------------------------------------
+*/
+
+.module-card {
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #9fb3c2;
+
+    box-shadow:
+        0 0.5rem 1rem rgba(0, 0, 0, 0.07);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Iconos de módulos
+|--------------------------------------------------------------------------
+*/
+
+.module-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 0.65rem;
+
+    background-color: #edf2f5;
+
+    color: #52738b;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Botón principal VAAI
+|--------------------------------------------------------------------------
+*/
+
+.btn-vaai {
+    --cui-btn-color: #ffffff;
+
+    --cui-btn-bg: #52738b;
+    --cui-btn-border-color: #52738b;
+
+    --cui-btn-hover-color: #ffffff;
+    --cui-btn-hover-bg: #45657c;
+    --cui-btn-hover-border-color: #45657c;
+
+    --cui-btn-focus-shadow-rgb: 82, 115, 139;
+
+    --cui-btn-active-color: #ffffff;
+    --cui-btn-active-bg: #3e5c70;
+    --cui-btn-active-border-color: #3e5c70;
+
+    --cui-btn-disabled-color: #ffffff;
+    --cui-btn-disabled-bg: #52738b;
+    --cui-btn-disabled-border-color: #52738b;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Formularios
+|--------------------------------------------------------------------------
+*/
+
+.form-control,
+.form-select {
+    box-shadow: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #829bab;
+
+    box-shadow:
+        0 0 0 0.2rem rgba(82, 115, 139, 0.12);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Input Groups
+|--------------------------------------------------------------------------
+*/
+
+.input-group-text {
+    background-color: var(--cui-tertiary-bg);
+
+    border-color: var(--cui-border-color);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Modal
+|--------------------------------------------------------------------------
+*/
+
+.modal-content {
+    border: 0;
+
+    box-shadow:
+        0 1rem 3rem rgba(0, 0, 0, 0.14);
+}
+
+.modal-header {
+    border-bottom-color: var(--cui-border-color);
+}
+
+.modal-footer {
+    border-top-color: var(--cui-border-color);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Alertas
+|--------------------------------------------------------------------------
+*/
+
+.alert {
+    font-size: 0.86rem;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Catálogos
+|--------------------------------------------------------------------------
+*/
+
+.catalog-card {
+    overflow: hidden;
+
+    border-radius: 0.5rem;
+}
+
+.catalog-card .card-header {
+    border-bottom-color: var(--cui-border-color);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Tabla general
+|--------------------------------------------------------------------------
+*/
+
+.table {
+    margin-bottom: 0;
+
+    vertical-align: middle;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Tabla compacta de catálogos
+|--------------------------------------------------------------------------
+*/
+
+.catalog-table {
+    margin-bottom: 0;
+
+    font-size: 0.84rem;
+
+    /*
+    |--------------------------------------------------------------------------
+    | Encabezados
+    |--------------------------------------------------------------------------
+    */
+
+    thead th {
+        padding-top: 0.68rem;
+        padding-bottom: 0.68rem;
+
+        background-color: var(--cui-tertiary-bg);
+
+        border-top: 0;
+        border-bottom-width: 1px;
+        border-bottom-color: var(--cui-border-color);
+
+        color: var(--cui-secondary-color);
+
+        font-size: 0.69rem;
+        font-weight: 600;
+
+        letter-spacing: 0.035rem;
+
+        text-transform: uppercase;
+
+        white-space: nowrap;
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Celdas
+    |--------------------------------------------------------------------------
+    */
+
+    tbody td {
+        padding-top: 0.62rem;
+        padding-bottom: 0.62rem;
+
+        border-bottom-color:
+            var(--cui-border-color-translucent);
+
+        vertical-align: middle;
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Filas
+    |--------------------------------------------------------------------------
+    */
+
+    tbody tr {
+        transition:
+            background-color 0.15s ease,
+            box-shadow 0.15s ease;
+    }
+
+    tbody tr:hover {
+        background-color:
+            rgba(82, 115, 139, 0.045);
+    }
+
+    tbody tr:last-child td {
+        border-bottom: 0;
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Botones para ordenar columnas
+|--------------------------------------------------------------------------
+*/
+
+.catalog-sort-button {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: inherit;
+
+    font: inherit;
+
+    text-transform: inherit;
+
+    letter-spacing: inherit;
+
+    cursor: pointer;
+
+    transition: color 0.15s ease;
+}
+
+.catalog-sort-button:hover {
+    color: var(--cui-emphasis-color);
+}
+
+.catalog-sort-button:focus-visible {
+    border-radius: 0.2rem;
+
+    outline: 2px solid rgba(82, 115, 139, 0.3);
+
+    outline-offset: 3px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Identificador del registro
+|--------------------------------------------------------------------------
+*/
+
+.catalog-id {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 30px;
+    height: 25px;
+
+    padding-inline: 0.35rem;
+
+    border-radius: 0.35rem;
+
+    background-color: var(--cui-tertiary-bg);
+
+    color: var(--cui-secondary-color);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Icono del tipo de catálogo
+|--------------------------------------------------------------------------
+*/
+
+.catalog-type-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 29px;
+    height: 29px;
+
+    border-radius: 0.42rem;
+
+    background-color: #edf2f5;
+
+    color: #52738b;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Botones de acciones de las tablas
+|--------------------------------------------------------------------------
+*/
+
+.catalog-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+
+    border-radius: 0.4rem;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.1s ease;
+}
+
+.catalog-action-button:hover {
+    transform: translateY(-1px);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Estado Activo / Inactivo
+|--------------------------------------------------------------------------
+*/
+
+.catalog-status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.4rem;
+
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.catalog-status-dot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Buscador de catálogos
+|--------------------------------------------------------------------------
+*/
+
+.catalog-search {
+    max-width: 310px;
+}
+
+.catalog-search .form-control {
+    font-size: 0.82rem;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Badges
+|--------------------------------------------------------------------------
+*/
+
+.badge {
+    font-weight: 500;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Paginación
+|--------------------------------------------------------------------------
+*/
+
+.pagination {
+    --cui-pagination-color: #52738b;
+
+    --cui-pagination-hover-color: #45657c;
+
+    --cui-pagination-focus-color: #45657c;
+
+    --cui-pagination-active-bg: #52738b;
+
+    --cui-pagination-active-border-color: #52738b;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+.footer {
+    min-height: calc(3rem + 1px);
+
+    background-color: var(--cui-body-bg);
+
+    border-top-color: var(--cui-border-color) !important;
+
+    font-size: 0.8rem;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Scrollbar
+|--------------------------------------------------------------------------
+*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background-color:
+        rgba(100, 116, 139, 0.32);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color:
+        rgba(100, 116, 139, 0.48);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Responsive
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 991.98px) {
+
+    .body {
+        padding-bottom: 1rem;
+    }
+
+    .catalog-search {
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 767.98px) {
+
+    .page-title {
+        font-size: 1.3rem;
+    }
+
+    .catalog-table {
+        font-size: 0.8rem;
+    }
+
+    .catalog-table thead th {
+        font-size: 0.65rem;
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Modo oscuro
+|--------------------------------------------------------------------------
+|
+| Queda preparado para agregar posteriormente el selector de tema.
+|
+*/
+
+@include color-mode(dark) {
+
+    body {
+        background-color:
+            var(--cui-dark-bg-subtle);
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Header / Footer
+    |--------------------------------------------------------------------------
+    */
+
+    .header,
+    .footer {
+        background-color:
+            var(--cui-body-bg);
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Iconos Dashboard
+    |--------------------------------------------------------------------------
+    */
+
+    .module-icon {
+        background-color:
+            rgba(255, 255, 255, 0.08);
+
+        color: #a9bdca;
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Catálogo
+    |--------------------------------------------------------------------------
+    */
+
+    .catalog-type-icon {
+        background-color:
+            rgba(255, 255, 255, 0.07);
+
+        color: #a9bdca;
+    }
+
+    .catalog-id {
+        background-color:
+            rgba(255, 255, 255, 0.06);
+    }
+
+    .catalog-table tbody tr:hover {
+        background-color:
+            rgba(255, 255, 255, 0.025);
+    }
+
+    .module-card:hover {
+        border-color: #52738b;
+    }
+
+}

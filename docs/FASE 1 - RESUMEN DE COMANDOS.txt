@@ -1,0 +1,85 @@
+FASE 1 - RESUMEN DE COMANDOS:
+
+:: Verificar PHP
+php -v
+
+:: Verificar Composer
+composer --version
+
+:: Verificar Node.js
+node -v
+
+:: Verificar npm
+npm -v
+
+:: Verificar MariaDB de XAMPP
+C:\xampp\mysql\bin\mysql.exe --version
+
+:: Entrar a htdocs
+cd C:\xampp\htdocs
+
+:: Ver contenido
+dir
+
+:: Crear específicamente proyecto Laravel 12
+composer create-project laravel/laravel:^12.0 inventarios_vaai
+
+:: Entrar al proyecto
+cd inventarios_vaai
+
+:: Verificar versión de Laravel
+php artisan --version
+
+:: Ver información del entorno
+php artisan about
+
+:: Levantar servidor de desarrollo
+php artisan serve
+
+
+Base de Datos:
+db_inventario_vaai
+
+utf8mb4_unicode_ci
+
+------------------------------
+php artisan config:clear
+
+php artisan migrate
+
+php artisan migrate:status
+
+php artisan cache:clear
+
+-----------------------------
+ROLES
+
+php artisan make:migration create_vaai_roles_table
+
+php artisan make:migration create_vaai_usuarios_table
+
+-----
+php artisan make:model Rol
+
+php artisan make:model Usuario
+
+-----------
+
+
+
+php artisan config:clear
+php artisan cache:clear
+
+
+php artisan make:seeder RolSeeder
+php artisan make:seeder UsuarioSeeder
+
+php artisan migrate
+php artisan db:seed
+
+
+1. Crear migraciones
+2. Ejecutar php artisan migrate
+3. Crear/ajustar modelos
+4. Crear seeders
+5. Ejecutar php artisan db:seed

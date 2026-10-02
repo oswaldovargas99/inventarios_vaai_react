@@ -1,0 +1,60 @@
+INVENTARIOS VAAI
+│
+├── Autenticación
+│   ├── Iniciar sesión
+│   ├── Cerrar sesión
+│   └── Recuperar contraseña
+│
+├── Dashboard
+│   ├── Total equipos
+│   ├── Equipos activos
+│   ├── Equipos asignados
+│   ├── Equipos disponibles
+│   ├── Equipos en mantenimiento
+│   └── Equipos dados de baja
+│
+├── Administración
+│   ├── Usuarios
+│   └── Roles
+│
+├── Catálogos
+│   ├── Tipos de equipo
+│   ├── Marcas
+│   ├── Modelos
+│   ├── Dependencias
+│   ├── Ubicaciones
+│   ├── Estados del equipo
+│   └── Proveedores
+│
+├── Inventario
+│   ├── Alta de equipo
+│   ├── Consulta
+│   ├── Edición
+│   ├── Detalle
+│   └── Historial
+│
+├── Asignaciones
+│   ├── Asignar equipo
+│   ├── Reasignar
+│   ├── Devolver
+│   └── Historial
+│
+├── Movimientos
+│   ├── Entrada
+│   ├── Salida
+│   ├── Cambio ubicación
+│   └── Cambio responsable
+│
+├── Mantenimiento
+│   ├── Preventivo
+│   ├── Correctivo
+│   └── Historial
+│
+├── Bajas
+│   ├── Solicitud
+│   ├── Autorización
+│   └── Baja definitiva
+│
+├── Reportes
+│
+└── Bitácora

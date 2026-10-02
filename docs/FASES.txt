@@ -1,0 +1,55 @@
+1. Autenticación
+   ├── Inicio de sesión
+   ├── Cerrar sesión
+   ├── Perfil
+   └── Cambio de contraseña
+
+2. Dashboard
+   ├── Total de equipos
+   ├── Equipos activos
+   ├── Equipos asignados
+   ├── Equipos disponibles
+   ├── Equipos en mantenimiento
+   ├── Equipos dados de baja
+   └── Estadísticas
+
+3. Inventario
+   ├── Equipos
+   ├── Alta
+   ├── Consulta
+   ├── Edición
+   ├── Asignación
+   ├── Reasignación
+   ├── Mantenimiento
+   └── Baja
+
+4. Catálogos
+   ├── Tipos de equipo
+   ├── Marcas
+   ├── Modelos
+   ├── Dependencias
+   ├── Proveedores
+   ├── Estados
+   └── Ubicaciones
+
+5. Movimientos
+   ├── Entrada
+   ├── Asignación
+   ├── Reasignación
+   ├── Mantenimiento
+   ├── Devolución
+   └── Baja
+
+6. Administración
+   ├── Usuarios
+   ├── Roles
+   └── Permisos
+
+7. Reportes
+   ├── Inventario general
+   ├── Por dependencia
+   ├── Por tipo
+   ├── Por marca
+   ├── Por estado
+   ├── Movimientos
+   └── Exportación Excel/PDF
